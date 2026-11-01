@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
-import pandaClip from "@/assets/panda-loop.webp.asset.json";
+import pandaClip from "@/assets/panda-loop.webp";
 import pandaStill from "@/assets/panda-notail.png";
 
 export const Route = createFileRoute("/")({
@@ -85,7 +85,7 @@ function Index() {
         <div className="relative">
           <span className="animate-panda-shadow absolute left-1/2 -bottom-[1.5vh] w-[58%] h-[3vh] rounded-[50%] bg-black/50 blur-lg" />
           <img
-            src={still ? pandaStill : pandaClip.url}
+            src={still ? pandaStill : pandaClip}
             onError={() => setStill(true)}
             alt="Panda da DEV Wak olhando para o celular e sorrindo"
             width={283}
